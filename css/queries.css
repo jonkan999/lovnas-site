@@ -1,0 +1,317 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1720px (category grid breaks) */
+/**************************/
+@media (max-width: 108em) {
+  .hero-button-box {
+    right: 2%;
+  }
+
+  .hero-buttons a {
+    width: 25rem;
+    height: 10rem;
+  }
+}
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .background-image {
+    background-position: right top;
+  }
+  .header-logo {
+    padding: 3rem 0 8rem 5rem;
+  }
+  .main-nav-list {
+    padding: 0 5rem 8rem 0;
+  }
+  .hero-button-box {
+    top: 70%;
+    right: 2%;
+  }
+
+  .hero-buttons a {
+    width: 20rem;
+    height: 8rem;
+    font-size: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .hero-buttons {
+    gap: 2rem;
+  }
+  .hero-buttons a {
+    width: 22rem;
+    height: 9rem;
+    font-size: 2.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .background-image {
+    background-position: 75% top;
+  }
+  .hero-buttons {
+    gap: 3rem;
+  }
+  .hero-button-box {
+    top: 70%;
+    right: 5%;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 4;
+  }
+
+  /*   .hero-brand-box--closed {
+    display: none; 
+  } */
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* z-index: -1; */
+    /* 		transform: translateX(100%);
+		-webkit-transform: translateX(100%); */
+
+    display: none;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .nav-open .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background-color: var(--ice-blue--opaque);
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+    animation: slideIn ease 0.5s;
+    -webkit-animation: slideIn ease 0.5s;
+    -moz-animation: slideIn ease 0.5s;
+    -o-animation: slideIn ease 0.5s;
+    -ms-animation: slideIn ease 0.5s;
+    z-index: 4;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .nav-close .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background-color: var(--ice-blue--opaque);
+
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(100%);
+    animation: slideOut ease 0.5s;
+    -webkit-animation: slideOut ease 0.5s;
+    -moz-animation: slideOut ease 0.5s;
+    -o-animation: slideOut ease 0.5s;
+    -ms-animation: slideOut ease 0.5s;
+    z-index: 1;
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.8rem;
+  }
+
+  .main-nav-link.nav-cta:link,
+  .main-nav-link.nav-cta:visited {
+    font-size: 2.1rem;
+  }
+
+  .language-dropdown-buttton select {
+    font-size: 2.3rem;
+  }
+
+  .header-buttons {
+    gap: 1.5rem;
+  }
+
+  .header-buttons button {
+    font-size: 1.6rem;
+    gap: 0.3rem;
+    padding: 0.3rem 0;
+    margin: 0 0.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .right-nav-box {
+    gap: 1rem;
+  }
+  .language-dropdown-selector {
+    font-size: 1.2rem;
+    gap: 0.3rem;
+    padding: 0.3rem 0;
+    margin: 0 0.5rem;
+  }
+  .close-btn-container {
+    right: -0.4rem;
+  }
+
+  .byob-venues-article {
+    /* height: 140%; */
+    width: 170%;
+  }
+
+  .scroll-text {
+    /* increase speed for smaller screens */
+    -moz-animation: scroller 8s linear infinite;
+    -webkit-animation: scroller 8s linear infinite;
+    animation: scroller 8s linear infinite;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .background-image {
+    background-position: 78% top;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+  }
+
+  .logo-col {
+    grid-column: 1/3;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem auto;
+    height: 15rem;
+  }
+  .social-links {
+    margin: 0 auto 2rem auto;
+  }
+  .copyright {
+    margin: 0 auto 2rem auto;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .background-image {
+    background-position: 75% top;
+  }
+
+  .hero-button-box {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .lower-header-button-icon {
+    display: none;
+  }
+}
+
+/**************************/
+/* BELOW 430px ( new Phones) */
+/**************************/
+@media (max-width: 27em) {
+  .background-image {
+    background-position: 68% top;
+  }
+
+  .hero-button-box {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  .grid {
+    row-gap: 3.6rem;
+  }
+}
