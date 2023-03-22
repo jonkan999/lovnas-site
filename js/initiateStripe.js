@@ -6,7 +6,7 @@ var checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", function () {
   // Get the quantity value from the numberInput element
-  const quantity = numberInput.value;
+  let quantity = numberInput.value;
   // Create a new Checkout Session using the server-side endpoint you
   // created in step 3.
   fetch("/api/stripe", {

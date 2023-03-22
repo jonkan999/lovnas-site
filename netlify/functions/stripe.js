@@ -1,8 +1,9 @@
 // netlify/function/stripe.js
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
-const { quantity } = JSON.parse(event.body);
+
 exports.handler = async (event, context) => {
+  const { quantity } = JSON.parse(event.body);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
@@ -12,8 +13,10 @@ exports.handler = async (event, context) => {
       },
     ],
     mode: "payment",
-    success_url: "https://lovnasbryggeri.netlify.app/sucess.html",
-    cancel_url: "https://lovnasbryggeri.netlify.app/folkölshoppen.html",
+    success_url: "https://serverless-payments.netlify.app/success",
+    cancel_url: "https://serverless-payments.netlify.app/cancel",
+    /*     success_url: "https://lovnasbryggeri.netlify.app/sucess.html",
+    cancel_url: "https://lovnasbryggeri.netlify.app/folkölshoppen.html", */
   });
   return {
     statusCode: 200,
