@@ -1,9 +1,14 @@
 # example netlify.toml
 [build]
   command = "echo 'Nothing to build'"
+  functions = "netlify/functions"
   publish = "."
 [start]
   command = "node server.js"
+[[redirects]]
+  from = '/api/*'
+  to = '/.public/:splat'
+  status = 200
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.

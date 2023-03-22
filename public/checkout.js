@@ -18,11 +18,14 @@ document
 let emailAddress = "";
 // Fetches a payment intent and captures the client secret
 async function initialize() {
-  const response = await fetch("/create-payment-intent", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ items }),
-  });
+  const response = await fetch(
+    "https://lovnasbryggeri.netlify.app/create-payment-intent",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items }),
+    }
+  );
   const { clientSecret } = await response.json();
 
   const appearance = {
