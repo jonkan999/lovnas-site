@@ -1,7 +1,9 @@
 # example netlify.toml
 [build]
-  command = "npm run build"
+  command = "echo 'Nothing to build'"
   publish = "."
+[start]
+  command = "node server.js"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
