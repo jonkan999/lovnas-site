@@ -7,13 +7,7 @@ exports.handler = async (event, context) => {
     payment_method_types: ["card"],
     line_items: [
       {
-        price_data: {
-          currency: "usd",
-          product_data: {
-            name: "T-shirt",
-          },
-          unit_amount: 2000,
-        },
+        price: "price_1MoXwGLHXKTpG87XbhFcS6CW",
         quantity: 1,
       },
     ],
