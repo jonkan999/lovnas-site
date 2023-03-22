@@ -1,9 +1,8 @@
 // netlify/function/stripe.js
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
-console.log("running");
+const { quantity } = JSON.parse(event.body);
 exports.handler = async (event, context) => {
-  const { quantity } = JSON.parse(event.body);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
