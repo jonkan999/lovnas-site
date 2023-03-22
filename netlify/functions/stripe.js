@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
     line_items: [
       {
         price: "price_1MoXwGLHXKTpG87XbhFcS6CW",
-        quantity: 1,
+        quantity: event.body.quantity, // use the quantity value from the request body
       },
     ],
     mode: "payment",
