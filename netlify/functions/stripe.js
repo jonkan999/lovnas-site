@@ -13,10 +13,10 @@ exports.handler = async (event, context) => {
       },
     ],
     mode: "payment",
-    success_url: "https://serverless-payments.netlify.app/success",
-    cancel_url: "https://serverless-payments.netlify.app/cancel",
-    /*   success_url: "https://lovnasbryggeri.netlify.app/sucess.html",
-    cancel_url: "https://lovnasbryggeri.netlify.app/folkölshoppen.html", */
+    /*     success_url: "https://serverless-payments.netlify.app/success",
+    cancel_url: "https://serverless-payments.netlify.app/cancel", */
+    success_url: "https://lovnasbryggeri.netlify.app/sucess.html",
+    cancel_url: "https://lovnasbryggeri.netlify.app/folkölshoppen.html",
   });
   return {
     statusCode: 200,
