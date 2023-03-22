@@ -109,7 +109,7 @@ form {
   align-items: center;
   justify-content: center;
 }
-#submit {
+#checkout-button {
   background: #5469d4;
   font-family: Arial, sans-serif;
   color: #ffffff;
@@ -128,11 +128,11 @@ form {
   height: 2rem;
   color: var(--main-text-color);
 }
-#submit:hover {
+#checkout-button:hover {
   background-color: rgba(19, 33, 82) !important;
   color: #ede7d9 !important;
 }
-#submit:disabled {
+#checkout-button:disabled {
   opacity: 0.5;
   cursor: default;
 }
