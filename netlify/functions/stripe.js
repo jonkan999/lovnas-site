@@ -17,6 +17,7 @@ exports.handler = async (event, context) => {
     cancel_url: "https://serverless-payments.netlify.app/cancel", */
     success_url: "https://lovnasbryggeri.netlify.app/success.html",
     cancel_url: "https://lovnasbryggeri.netlify.app/folkolshoppen.html",
+    shipping_address_collection: "SE",
   });
   return {
     statusCode: 200,
