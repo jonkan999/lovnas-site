@@ -6,12 +6,12 @@ var checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", function () {
   // Get the quantity value from the numberInput element
-  /* const quantity = numberInput.value; */
+  const quantity = numberInput.value;
   // Create a new Checkout Session using the server-side endpoint you
   // created in step 3.
   fetch("/api/stripe", {
     method: "POST",
-    /* body: JSON.stringify({ quantity: quantity }), */
+    body: JSON.stringify({ quantity: quantity }),
   })
     .then(function (response) {
       return response.json();
