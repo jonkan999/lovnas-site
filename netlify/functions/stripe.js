@@ -3,12 +3,13 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 console.log("running");
 exports.handler = async (event, context) => {
+  const { quantity } = JSON.parse(event.body);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
       {
         price: "price_1MoXwGLHXKTpG87XbhFcS6CW",
-        quantity: event.body.quantity, // use the quantity value from the request body
+        quantity: quantity, // use the quantity value from the request body
       },
     ],
     mode: "payment",
