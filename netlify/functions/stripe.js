@@ -17,7 +17,20 @@ exports.handler = async (event, context) => {
     cancel_url: "https://serverless-payments.netlify.app/cancel", */
     success_url: "https://lovnasbryggeri.netlify.app/success.html",
     cancel_url: "https://lovnasbryggeri.netlify.app/folkolshoppen.html",
-    shipping_address_collection: "SE",
+    shipping_address_collection: { allowed_countries: ["SE"] },
+    shipping_options: [
+      {
+        shipping_rate_data: {
+          type: "fixed_amount",
+          fixed_amount: { amount: 0, currency: "sek" },
+          display_name: "Free shipping",
+          delivery_estimate: {
+            minimum: { unit: "business_day", value: 4 },
+            maximum: { unit: "business_day", value: 10 },
+          },
+        },
+      },
+    ],
   });
   return {
     statusCode: 200,
