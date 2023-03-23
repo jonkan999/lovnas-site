@@ -31,7 +31,6 @@ exports.handler = async (event, context) => {
         },
       },
     ],
-    locale: "SE",
   });
   return {
     statusCode: 200,

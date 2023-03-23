@@ -446,6 +446,7 @@ body {
     #f2f6ff4f
   );
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 
 .cta-text-box {
@@ -682,6 +683,7 @@ body {
 
   padding: 0.5rem;
   background-color: #b0e0e667;
+  color: var(--main-text-color);
   transition: all 0.3s;
   font-weight: 500;
   border: 1px solid #555;
