@@ -30,6 +30,7 @@ exports.handler = async (event, context) => {
             maximum: { unit: "business_day", value: 10 },
           },
         },
+        optional: true,
       },
     ],
   });
