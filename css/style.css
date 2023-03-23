@@ -693,6 +693,7 @@ body {
 .btn--shop:hover {
   background-color: var(--highlight-color);
   color: var(--white-text-color);
+  cursor: pointer;
 }
 
 /***************************** */
