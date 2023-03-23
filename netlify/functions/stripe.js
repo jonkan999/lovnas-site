@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
       },
     ],
     mode: "payment",
-    locale: "se",
+    locale: "sv",
     /*     success_url: "https://serverless-payments.netlify.app/success",
     cancel_url: "https://serverless-payments.netlify.app/cancel", */
     success_url: "https://lovnasbryggeri.netlify.app/success.html",
