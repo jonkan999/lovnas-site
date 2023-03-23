@@ -12,10 +12,10 @@ exports.handler = async (event, context) => {
         quantity: quantity, // use the quantity value from the request body
       },
     ],
-    shipping_rates: [
+    /*     shipping_rates: [
       "shr_1MoknOLHXKTpG87X9ar2X0eU", // Replace with the actual shipping rate ID for "Frakt"
       "shr_1MokoPLHXKTpG87XYHWH8ugz", // Replace with the actual shipping rate ID for "Upphämtning på Roslagsgatan 14, Stockholm"
-    ],
+    ], */
     mode: "payment",
     locale: "sv",
     /*     success_url: "https://serverless-payments.netlify.app/success",
