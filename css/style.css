@@ -724,7 +724,10 @@ body {
 }
 
 .grid--footer {
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-col {
@@ -742,12 +745,16 @@ body {
 .social-links {
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2.4rem;
 }
 
 .social-icon {
   height: 2.4rem;
   width: 2.4rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .copyright {
@@ -755,28 +762,34 @@ body {
   line-height: 1.6;
   color: #767676;
   margin-top: auto;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .contacts {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .address {
   margin-bottom: 3.2rem;
+  text-align: center;
 }
 
 .footer-heading {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .contacts {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .footer-nav {
