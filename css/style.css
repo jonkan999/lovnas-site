@@ -797,6 +797,6 @@ body {
 .footer-link a:hover,
 .footer-link a:active {
   color: #555;
-  border-bottom: solid 0.3rem #da77f2;
+  border-bottom: solid 0.3rem var(--highlight-color);
   margin-bottom: -0.3rem;
 }
