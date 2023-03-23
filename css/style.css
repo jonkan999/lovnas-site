@@ -532,6 +532,7 @@ body {
   min-height: 150%;
   grid-column: 2 / 3;
   box-shadow: 0 0.1rem 0.5rem rgba(71, 57, 75, 0.3);
+  color: var(--main-text-color);
   background-color: var(--tint-color);
   display: flex;
   align-items: center;
@@ -540,6 +541,7 @@ body {
   border: 1px solid #555;
   border-radius: 100rem;
   transition: all 0.3s;
+  margin-bottom: 1.2rem;
 }
 
 .cta-form button:hover,
@@ -627,7 +629,12 @@ body {
   margin-bottom: 2rem;
   line-height: 1.4;
 }
-.section-folkolshop label {
+.section-folkolshop .beer-description a {
+  color: var(--main-text-color);
+  font-weight: 400;
+}
+
+.section-folkolshop .add-btn .section-folkolshop label {
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -635,6 +642,11 @@ body {
   width: 80%;
   display: flex;
   gap: 0.5rem;
+}
+
+.quantity-container ion-icon {
+  width: 2rem;
+  height: 2rem;
 }
 .section-folkolshop input {
   width: 30%;
