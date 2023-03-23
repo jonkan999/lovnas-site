@@ -49,7 +49,7 @@ exports.handler = async (event, context) => {
         },
       },
       {
-        id: "upphämtning",
+        id: "upphamtning",
         shipping_rate_data: {
           type: "fixed_amount",
           fixed_amount: { amount: 0, currency: "sek" },
