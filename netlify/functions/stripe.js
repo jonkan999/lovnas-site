@@ -12,7 +12,10 @@ exports.handler = async (event, context) => {
         quantity: quantity, // use the quantity value from the request body
       },
     ],
-    shipping_rates: ["frakt", "upphamtning"],
+    shipping_rates: [
+      "shr_1MoknOLHXKTpG87X9ar2X0eU", // Replace with the actual shipping rate ID for "Frakt"
+      "shr_1MokoPLHXKTpG87XYHWH8ugz", // Replace with the actual shipping rate ID for "Upphämtning på Roslagsgatan 14, Stockholm"
+    ],
     mode: "payment",
     locale: "sv",
     /*     success_url: "https://serverless-payments.netlify.app/success",
@@ -20,44 +23,6 @@ exports.handler = async (event, context) => {
     success_url: "https://lovnasbryggeri.netlify.app/success.html",
     cancel_url: "https://lovnasbryggeri.netlify.app/folkolshoppen.html",
     shipping_address_collection: { allowed_countries: ["SE"] },
-    shipping_options: [
-      {
-        id: "frakt",
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 50, currency: "sek" },
-          display_name: "Frakt",
-          delivery_estimate: {
-            minimum: { unit: "business_day", value: 4 },
-            maximum: { unit: "business_day", value: 10 },
-          },
-        },
-      },
-      {
-        id: "upphamtning",
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 0, currency: "sek" },
-          display_name: "Upphämtning på Roslagsgatan 14, Stockholm",
-        },
-      },
-      /*       {
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 50, currency: "sek" },
-          display_name: "Frakt",
-          delivery_estimate: {
-            minimum: { unit: "business_day", value: 4 },
-            maximum: { unit: "business_day", value: 10 },
-          },
-        },
-        shipping_rate_data: {
-          type: "fixed_amount",
-          fixed_amount: { amount: 0, currency: "sek" },
-          display_name: "Upphämtning på Roslagsgatan 14",
-        },
-      }, */
-    ],
   });
   return {
     statusCode: 200,
