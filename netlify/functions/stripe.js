@@ -21,14 +21,9 @@ exports.handler = async (event, context) => {
         shipping_rate: "shr_1MokoPLHXKTpG87XYHWH8ugz", // Replace with the actual shipping rate ID for "Upphämtning på Roslagsgatan 14, Stockholm"
       },
     ],
-    /*     shipping_rates: [
-      "shr_1MoknOLHXKTpG87X9ar2X0eU", // Replace with the actual shipping rate ID for "Frakt"
-      "shr_1MokoPLHXKTpG87XYHWH8ugz", // Replace with the actual shipping rate ID for "Upphämtning på Roslagsgatan 14, Stockholm"
-    ], */
+
     mode: "payment",
     locale: "sv",
-    /*     success_url: "https://serverless-payments.netlify.app/success",
-    cancel_url: "https://serverless-payments.netlify.app/cancel", */
     success_url: "https://lovnasbryggeri.netlify.app/success.html",
     cancel_url: "https://lovnasbryggeri.netlify.app/folkolshoppen.html",
   });
