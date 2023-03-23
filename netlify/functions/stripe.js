@@ -23,14 +23,16 @@ exports.handler = async (event, context) => {
         shipping_rate_data: {
           type: "fixed_amount",
           fixed_amount: { amount: 0, currency: "sek" },
-          display_name: "Free shipping",
+          display_name: "Fri frakt (Lämna tom om upphämtning)",
           delivery_estimate: {
             minimum: { unit: "business_day", value: 4 },
             maximum: { unit: "business_day", value: 10 },
           },
         },
+        optional: true,
       },
     ],
+    locale: "SE",
   });
   return {
     statusCode: 200,

@@ -299,7 +299,7 @@
     align-items: center;
   }
   .header-logo {
-    padding: 3rem;
+    padding: 5rem;
   }
   .btn-mobile-nav {
     margin: 0;
@@ -315,7 +315,7 @@
 
   .hero-button-box {
     position: absolute;
-    top: 43%;
+    top: 48%;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -324,7 +324,9 @@
   .hero-buttons a {
     background-color: rgba(127, 215, 252, 0.432);
   }
-
+  .main-nav-list {
+    padding: 0 0rem 8rem 0;
+  }
   .grid {
     row-gap: 4.8rem;
   }
@@ -393,6 +395,9 @@
 /* BELOW 430px ( new Phones) */
 /**************************/
 @media (max-width: 27em) {
+  .header-logo {
+    padding: 3rem;
+  }
   .background-image {
     background-position: 68% top;
   }

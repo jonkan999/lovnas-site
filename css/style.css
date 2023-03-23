@@ -22,7 +22,7 @@ body {
 /* COLOR PALETTE */
 /***************************** */
 :root {
-  --highlight-color: rgba(19, 33, 82);
+  --highlight-color: #132152;
   --main-text-color: #1c1c1b;
   --white-text-color: #ede7d9;
   --tint-color: #f2f6ff;
